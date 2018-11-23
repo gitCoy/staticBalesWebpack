@@ -1,0 +1,12 @@
+mixin shopTitle(obj)
+  .shop-title-wrap
+    h2= obj.title1
+    h2= obj.title2
+    -if(false) { //-Save the judgment here to prevent the changes from going back
+    p
+      =obj.titleDesc[0]
+      br
+      =obj.titleDesc[1]
+    -} else {
+    p= obj.titleDesc[0]
+    -}

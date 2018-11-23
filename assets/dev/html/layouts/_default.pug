@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    block meta
+    meta(
+      http-equiv = "X-UA-Compatible"
+      content="IE=edge,chrome=1"
+    )
+    meta(
+      name='viewport'
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no viewport-fit=cover"
+    )
+    meta(
+      name='keywords'
+      content='イヤフォン,ワイヤレス,ファノーム,FUNOHM,ワイヤレスイヤホン'
+    )
+    meta(
+      name='description'
+      content='完全独立型ワイヤレスイヤホン「ファノーム」の公式サイトです。20時間連続再生、防水、防滴仕様、落下に強いワイヤレスイヤフォンを製造・販売しています。'
+    )
+    -
+      var page_class = []
+    -
+    block page_option
+    link(
+      rel="stylesheet"
+      href="stylesheet/application.min.css"
+      type="text/css"
+    )
+    link(
+      rel="shortcut icon"
+      type="image/x-icon"
+      href='image/favicon.ico'
+    )
+    link(
+      rel="icon"
+      href='image/favicon.png'
+    )
+    link(
+      rel="apple-touch-icon"
+      href='image/favicon.png'
+    )
+    script !function(e,t){var n=t.documentElement,d=e.devicePixelRatio||1;function i(){var clientWidth = 0; if(n.clientWidth > 1200){clientWidth = 1560}else if(n.clientWidth <= 1200 && n.clientWidth >= 800){clientWidth = 1200}else if(n.clientWidth < 800){clientWidth = n.clientWidth}else{clientWidth = n.clientWidth}var e=clientWidth/3.75;n.style.fontSize=e+"px"}if(function e(){t.body?t.body.style.fontSize="12px":t.addEventListener("DOMContentLoaded",e)}(),i(),e.addEventListener("resize",i),e.addEventListener("pageshow",function(e){e.persisted&&i()}),d>=2){var o=t.createElement("body"),a=t.createElement("div");a.style.border=".5px solid transparent",o.appendChild(a),n.appendChild(o),1===a.offsetHeight&&n.classList.add("hairlines"),n.removeChild(o)}}(window,document)
+    body(
+      class=page_class
+    )
+      //- mixin include start
+      include /mixin/shopTitle.pug
+      //- mixin include end
+
+      include /includes/_header.pug
+      block content
+      include /includes/_footer.pug
+      include /includes/_js.pug

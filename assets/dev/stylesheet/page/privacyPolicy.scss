@@ -1,0 +1,34 @@
+.page-policy {
+  .policy-content {
+    font-size: map_get($global-font-size, c);
+    line-height: 2.5;
+    padding-bottom: map_get($global-spacing, g);
+    font-family: NotoSansCJKjp-Regular ,$global-default-family;
+
+    h2 {
+      font-size: map_get($global-font-size, a);
+      line-height: 1;
+      padding: map_get($global-spacing, f) 0 (44/$calc-base-num)*$global-font-unit;
+      text-align: center;
+      font-family: NotoSansCJKjp-Medium ,$global-default-family;
+    }
+
+    a {
+      cursor: text;
+    }
+  }
+}
+
+
+/* media start*/
+@media screen and (max-width: map_get($global-width, mediaW)) {
+  .page-policy {
+    .policy-content {
+      font-size: (12/$calc-sp)*$global-font-unit;
+      h2 {
+        font-size: (20/$calc-sp)*$global-font-unit;
+        padding: (30/$calc-sp)*$global-font-unit 0;
+      }
+    }
+  }
+}

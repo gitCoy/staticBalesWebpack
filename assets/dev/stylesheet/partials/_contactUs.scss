@@ -1,0 +1,83 @@
+.contact-us-wrap {
+  padding: (180/$calc-base-num)*$global-font-unit 0;
+
+  .contact-cont {
+    display: flex;
+    justify-content: center;
+    transition: all map_get($global-time, transition);
+    width: 32%;
+    margin: 0 auto;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    span {
+      display: inline-block;
+      font-size: map_get($global-font-size, f);
+      line-height: 1;
+      flex-grow: 1;
+      padding: map_get($global-spacing, i) 0;
+      text-align: center;
+      font-family: DINAlternate-Bold ,$global-default-family;
+    }
+
+    .text-row {
+      border: 1px solid map_get($global-color, d);
+      color: map_get($global-color, e);
+      letter-spacing:2px;
+    }
+
+    .email-address {
+      background-color: map_get($global-color, a);
+      color: #fff;
+      letter-spacing:2px;
+    }
+  }
+}
+
+/* media start*/
+@media screen and (max-width: map_get($global-width, mediaW)) {
+  .contact-us-wrap {
+    background-color: map_get($global-color, k);
+
+    .contact-cont {
+      display: block;
+      width: 100%;
+      text-align: center;
+
+      span {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .text-row {
+        &:before {
+          content: '';
+          display: block;
+          width: (20/$calc-sp)*$global-font-unit ;
+          height: (36/$calc-sp)*$global-font-unit ;
+          background: url("../image/philosophy/email-icon.png") center no-repeat;
+          background-size: contain;
+          margin: 0 auto;
+          padding: (6/$calc-sp)*$global-font-unit 0;
+        }
+
+        border: none;
+        background-color: #fff;
+        padding-bottom: (35/$calc-sp)*$global-font-unit;
+        text-align: center;
+        font-size: (18/$calc-sp)*$global-font-unit;
+        letter-spacing: 3px;
+      }
+
+      .email-address {
+        width: 65%;
+        margin: 0 auto;
+        line-height: (52/$calc-sp)*$global-font-unit;
+        font-size: (12/$calc-sp)*$global-font-unit;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

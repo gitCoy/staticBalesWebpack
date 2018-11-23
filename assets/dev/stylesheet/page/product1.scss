@@ -1,0 +1,128 @@
+.page-product1 {
+    header {
+        border-top-color: map_get($global-color, b);
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .banner-wrap {
+        width: 100%;
+        background-color: #f5f5f5;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .banner-desc {
+        white-space: nowrap;
+        position: absolute;
+        bottom: (103/$calc-base-num)*1rem;
+        height: 100%;
+        width: 100%;
+        .imgs {
+            left :50%;
+           margin-left:(100/$calc-base-num)*1rem;;
+            position: absolute;
+            bottom: (30/$calc-base-num)*1rem;;
+            width: 50%;
+            display: flex;
+            height: 100%;
+            align-items: flex-end;
+
+        }
+
+        .imgs img {
+            max-height: 65%;
+        }
+
+        .imgs :nth-child(2) {
+            margin-left: (50/$calc-base-num)*1rem;;
+        }
+    }
+
+    .banner-desc >img {
+        display: inline-block;
+        height: (829/$calc-base-num)*1rem;
+    }
+
+    .banner-content {
+        position: relative;
+        height: 100%;
+    }
+
+    .product1-name {
+        width: (302/$calc-base-num)*1rem;
+        height: (289/$calc-base-num)*1rem;
+        font-size: (221/$calc-base-num)*1rem;
+        line-height: (221/$calc-base-num)*1rem;;
+        display:  inline-block;
+        vertical-align: bottom;
+        position: absolute;
+        bottom: (105/$calc-base-num)*1rem;
+        left: 0;
+        font-weight: 1000;
+    }
+
+    .product1-name img {
+        width: 100%;
+    }
+
+    .product-desc {
+        white-space: normal;
+        width: calc(50%  - #{(302/$calc-base-num)*1rem});
+        height: (214/$calc-base-num)*1rem;
+        font-family: NotoSansCJKjp-Bold,$global-default-family;
+        margin-left: (43/$calc-base-num)*1rem;
+        display:  inline-block;
+        font-size: (17/$calc-base-num)*1rem;
+        line-height: (25.5/$calc-base-num)*1rem;
+        vertical-align: bottom;
+        position: absolute;
+        left: (302/$calc-base-num)*1rem;
+        bottom: (187.5/$calc-base-num)*1rem;
+    }
+
+    .product-left :nth-child(0) {
+        font-size: (20/$calc-base-num)*1rem;;
+        line-height: (63.5/$calc-base-num)*1rem;;
+        letter-spacing:3px;
+     
+    }
+
+    .product-desc :nth-child(1) {
+        font-size: (24.5/$calc-base-num)*1rem;
+        font-family: NotoSansCJKjp-Bold, $global-default-family;
+        letter-spacing:3px;
+        line-height: (75/$calc-base-num)*1rem;
+    }
+
+    .product-desc :nth-child(2) {
+        letter-spacing:3px;
+        line-height: 1.5;
+    }
+
+    .product-desc :nth-child(3) {
+        letter-spacing:3px;
+        line-height: 1.5;
+    }
+
+    .battery-banner {
+        background-image: url('../image/product1/battery.jpg');
+        background-repeat:  no-repeat;
+        background-size: cover;
+        height: (750/$calc-base-num)*1rem;;
+    }
+
+    .color-list :nth-child(3) {
+        background-color: #939392 !important;;
+    }
+
+    
+}
+
+@media screen and (max-width: map_get($global-width, mediaW)) { 
+    .page-product1 .color-list :nth-child(3) {
+        background-color: #939392 !important;;
+    }
+}

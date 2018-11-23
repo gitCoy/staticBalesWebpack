@@ -1,0 +1,33 @@
+mixin shopRegion(obj)
+  -for(var j=0; j<obj.length; j++){
+  .shop-region-top.main-wrap
+    ul.top-content
+      li
+        p= obj[j].regionName.jp
+        p= obj[j].regionName.en
+      -for(var i=0; i<2; i++){
+      li
+        p= obj[j].toplist[i].row1
+        p= obj[j].toplist[i].row2
+        p= obj[j].toplist[i].row3
+      -}
+  .shop-region-content
+    ul.main-wrap.shop-region-ul
+      - for(var i=0; i<obj[j].contList.length; i++){
+      li
+        .region-item-title
+          p= obj[j].contList[i].title[0]
+          p= obj[j].contList[i].title[1] || ''
+        -if(obj[j].contList[i].txt1.length > 1) {
+        p
+          = obj[j].contList[i].txt1[0]
+          br
+          = obj[j].contList[i].txt1[1]
+        -} else {
+        p= obj[j].contList[i].txt1
+        -}
+        a.x-tel-link(data-href="tel:"+obj[j].contList[i].txt2)= 'TEL：' + obj[j].contList[i].txt2
+        p= obj[j].contList[i].txt3
+        a(href=obj[j].contList[i].txt4 target="_blank")= obj[j].contList[i].txt4
+      -}
+  -}

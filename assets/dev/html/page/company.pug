@@ -1,0 +1,42 @@
+extends ../layouts/_default.pug
+block meta
+  title 会社概要-完全ワイヤレスイヤホン「ファノーム」公式サイト
+block page_option
+  - page_class.push('page-padding-top page-company header-black')
+block content
+  -
+    var titleObj = {
+      'title1': 'ABOUT US',
+      'title2': 'COMPANY',
+      'titleDesc': ['会社概要']
+    }
+    var comInfoObj = [{
+      title: '会社名 (商号)',
+      cont: '株式会社メイ'
+    }, {
+      title: '所在地',
+      cont: '〒102-0083 東京都千代田区麹町2-14第1茜ビル6'
+    }, {
+      title: '代表取締役',
+      cont: '保坂明彦'
+    }, {
+      title: '設立',
+      cont: '1997年12月'
+    }, {
+      title: '資本金',
+      cont: '500万円'
+    }, {
+      title: '電話番号',
+      cont: '代表：03-3230-6638 '
+    }]
+  -
+  +shopTitle(titleObj)
+  .company-info-wrap
+    -for(var i=0; i<comInfoObj.length; i++){
+    dl.main-wrap
+      dt= comInfoObj[i].title
+      dd= comInfoObj[i].cont
+    -}
+  .company-map-wrap(id="googleMap")
+  include ../includes/_contactUs.pug
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFBiN6388ccgio23fPdhw3hN7Xq7YsiUI")

@@ -1,0 +1,44 @@
+.page-company {
+  .company-info-wrap {
+    padding: map_get($global-spacing, a) 0 map_get($global-spacing, l);
+
+    dl {
+      max-width: map_get($global-width, content);
+      display: flex;
+      font-size: 12px;
+      line-height: 1.56;
+      font-family: NotoSansCJKjp-Regular ,$global-default-family;
+
+      dt {
+        width: 300px;
+      }
+
+      dd {
+        flex: 1;
+      }
+
+      &+dl {
+        margin-top: map_get($global-spacing, h);
+      }
+    }
+  }
+  .company-map-wrap {
+    height: 52vh;
+  }
+}
+
+/* media start*/
+@media screen and (max-width: map_get($global-width, mediaW)) {
+  .page-company {
+    .company-info-wrap {
+      dl {
+        padding: (20/$calc-sp)*$global-font-unit 15px;
+        font-size: (12/$calc-sp)*$global-font-unit;
+
+        dt {
+          width: (85/$calc-sp)*$global-font-unit;
+        }
+      }
+    }
+  }
+}

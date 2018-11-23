@@ -1,0 +1,136 @@
+blockquote,body,button,caption,dd,div,dl,dt,fieldset,figure,form,h1,h2,h3,h4,h5,h6,hr,html,input,legend,li,menu,ol,p,pre,table,td,textarea,th,ul {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+address,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,th {
+  text-align: left;
+}
+
+abbr,body,fieldset,html,iframe,img {
+  border: 0;
+}
+
+img {
+  display: block;
+}
+
+address,cite,dfn,em,i,var {
+  font-style: normal;
+}
+
+[hidefocus],summary {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6,small {
+  font-size: 100%;
+}
+
+sub,sup {
+  font-size: 83%;
+}
+
+code,kbd,pre,samp {
+  font-family: inherit;
+}
+
+q:after,q:before {
+  content: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label,summary {
+  cursor: default;
+}
+
+a,button {
+  cursor: pointer;
+  color: #111;
+}
+
+a,a:hover,del,ins,s,u {
+  text-decoration: none;
+  outline: 0;
+}
+
+body,button,input,keygen,legend,select,textarea {
+  font-size: 12px;
+  line-height: 1.5;
+  color: map_get($global-color, a);
+  outline: 0;
+  font-family: $global-default-family,Heiti SC, Microsoft YaHei
+}
+
+input::-ms-clear,input::-ms-reveal {
+  display: none;
+}
+
+:root * {
+  //-webkit-filter: none !ie;
+  //filter: none !ie
+}
+
+*,:after,:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 75px;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+input {
+  box-shadow: none;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+:-moz-placeholder {
+  color: #999;
+}
+
+::-moz-placeholder {
+  color: #999;
+}
+
+:-ms-input-placeholder {
+  color: #999;
+}

@@ -1,0 +1,86 @@
+extends ../layouts/_default.pug
+block meta
+  title 取扱店舗一覧-完全ワイヤレスイヤホン「ファノーム」公式サイト
+block page_option
+  - page_class.push('page-padding-top page-shop header-black')
+block content
+  include /mixin/shopRegion.pug
+  -
+    var titleObj = {
+      'title1': 'FUNOHM',
+      'title2': 'SHOP LIST',
+      'titleDesc': ['FUNOHM 取り扱い店舗一覧', '店名および']
+    }
+    var shopRegionObj = [{
+      regionName: {
+        jp: '東京',
+        en: 'TOKYO'
+      },
+      toplist: [{
+        row1: '',
+        row2: '',
+        row3: ''
+      }, {
+        row1: '',
+        row2: '',
+        row3: ''
+      }],
+      contList: [{
+        title: ['アンジェ・ビュロー', 'ecute上野店'],
+        txt1: ['〒110-0005 東京都台東区上野7-1-1', 'JR東日本上野駅構内3階 ecute上野内'],
+        txt2: '03-5826-5681',
+        txt3: '営業時間：8:00-22:00（日祝 8:00-21:30）',
+        txt4: 'https://www.angers.jp/shoplist/angers-ueno/'
+      }, {
+        title: ['フジヤエービック', 'Part3'],
+        txt1: ['〒164-0001 東京都中野区中野5-52-15', '中野ブロードウェイ3F'],
+        txt2: '0120-189-248',
+        txt3: '営業時間 : 10:30-20:00 定休日：正月、休館日のみ',
+        txt4: 'https://www.fujiya-avic.jp/'
+      }, {
+        title: ['マークスタイルトーキョー', '表参道ヒルズ店'],
+        txt1: ['〒150-0001 東京都渋谷区神宮前4-12-10', '表参道ヒルズB3F'],
+        txt2: '03-3478-5337 ',
+        txt3: '営業時間：11:00～21:00 　日曜日 11:00～20:00',
+        txt4: 'https://marks.jp/shop/markstyle-tokyo/'
+      }, {
+        title: ['ONKYO BASE'],
+        txt1: ['〒101-0041 東京都千代田区神田須田町1丁目25番地4', 'mAAch ecute KANDA MANSEIBASHI'],
+        txt2: '080-8310-6278',
+        txt3: '営業時間：11:00～20:00 （定休日：不定休）',
+        txt4: 'http://onkyodirect.jp/shop/pages/ONKYOBASE_ACCESS.aspx'
+      }, {
+        title: ['山野楽器 銀座本店 B1', 'Beat Stage'],
+        txt1: ['〒104-0061 東京都 中央区銀座4-5-6'],
+        txt2: '03-3562-5051 ',
+        txt3: '営業時間：10:30～20:00  　定休日：不定休',
+        txt4: 'https://www.yamano-music.co.jp/shops/ginza/g-audio'
+      }]
+    }]
+  -
+  +shopTitle(titleObj)
+  .shop-img-row
+    .shop-img-col
+      img(src="image/shopList/shop-kitte.png" alt="アンジェ・ビュロー KITTE丸の内店")
+    .shop-img-col.shop-img-txt
+      dl.shop-img-dl
+        dt アンジェ・ビュロー KITTE丸の内店
+        dd 〒100-0005 東京都千代田区丸の内2-7-2 KITTE4F
+        dd
+          a.x-tel-link(data-href="tel:03-3217-2006") TEL：03-3217-2006
+        dd 営業時間：11:00-21:00（日祝 11:00-20:00）
+        dd
+          a(href="https://www.angers.jp/shoplist/angers-marunouchi/" target="_blank") https://www.angers.jp/shoplist/angers-marunouchi/
+  .shop-img-row.shop-row-reverse
+    .shop-img-col.shop-img-txt
+      dl.shop-img-dl
+        dt マークスタイルトーキョー GINZA SIX店
+        dd 〒 104-0061東京都中央区銀座6-10-1 GINZA SIX 5F
+        dd
+          a.x-tel-link(data-href="tel:03-6280-6776") TEL：03-6280-6776
+        dd 営業時間：10:30 ～ 20:30
+        dd
+          a(href="https://marks.jp/shop/markstyle-tokyo/" target="_blank") https://marks.jp/shop/markstyle-tokyo/
+    .shop-img-col
+      img(src="image/shopList/shop-six.png" alt="マークスタイルトーキョー GINZA SIX店")
+  +shopRegion(shopRegionObj)

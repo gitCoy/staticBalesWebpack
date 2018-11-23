@@ -1,0 +1,130 @@
+extends ../layouts/_default.pug
+block meta
+    title F1 製品ページ-完全ワイヤレスイヤホン「ファノーム」公式サイト
+block page_option
+  - page_class.push('page-product1 page-product header-black')
+block content
+  .banner-wrap.x-home-height
+    .banner-content.main-wrap
+        
+        .banner-desc.scroll
+            .product-intro
+                .product1-name 
+                    img(src="image/product1/h1.png" alt="FUNOHM")
+                .product-desc
+                    p wireless earphone
+                    p 連続7時間再生の長寿命バッテリーに加え、4mからの落下にも耐える耐衝撃性と、雨や汗にも強い防水性。
+                    p 圧倒的なタフさと、耳に優しいフィット感でどんなシーンにも寄り添う完全ワイヤレスイヤフォン。
+            .imgs
+                img.scroll-right(src="image/product1/F1-FRONT-L.png" alt="FUNOHM")
+                img.scroll-right(src="image/product1/F1w-SIDE-NEW.png" alt="FUNOHM")
+  .phone-banner.product1-phone-color
+    .phone-banner-title.box.scroll.scroll-delay
+        img(src="image/product1/h1.png" alt="FUNOHM")
+        p wireless earphone
+    .phone-banner-desc.box 
+        p.scroll-delay 連続20時間再生の長寿命バッテリーに加え、4mからの落下にも耐える耐衝撃性と、雨や汗にも強い防水性。圧倒的なタフさと、耳に優しいフィット感でどんなシーンにも寄り添う完全ワイヤレスイヤフォン。
+    .phone-banner-img1.box
+        img.scroll-delay(src="image/product1/F1-FRONT-L.png" alt="FUNOHM")
+        img.scroll-delay(src="image/product1/F1w-SIDE-NEW.png" alt="FUNOHM")
+  .phone-wrap.box   
+    .func-wrap
+        .run-img.scroll-left.add-delay
+            img(src="image/product1/relative-img.png" alt="FUNOHM")
+        .rock-img.scroll-right.add-delay
+            img(src="image/product1/kal.png" alt="FUNOHM")
+        .func-desc    
+            img.scroll.add-delay(src="image/product1/F1w-eatstabi.png" alt="FUNOHM")
+            .func-main
+                
+                .func-desc-line.scroll
+                .phone-fun-desc.scroll 
+                    p GOOD SOUNDS 
+                    p ALL AROUND
+                    p DAYS
+                .func-title-all.scroll
+                    .func-desc-title TOUGHNESS 
+                    .func-desc-title STABLE FIT
+                .func-desc-content.scroll 
+                    p 激しい動きでも 
+                    p ブレずにしっかりフィット   
+                .func-desc-detial.scroll 選べる3サイズのイヤースタビライザー×5サイズのイヤーピースで、耳の個性を吸収、微調整し、高いフィット感を実現。さらに耳珠（じじゅ）を利用した装着方法で長時間装着していても痛くない設計に。 
+    .battery-main  
+        .battery-banner.scroll 
+            .main-wrap.battery-content
+                .phone-battery-info
+                    p LONG BATTERY 
+                    p LIFE
+                ul.battery-list
+                    li 
+                        p 7時間連続再生OK
+                        p  スタミナモデル
+                    li イヤーピースは一人ひとりの耳の個性を吸収、微調整し、高いフィット感が可能に。強い力も加わらないので長時間装着しても痛くなりにくい設計。
+                .battery-sum  LONG BATTERY LIFE
+                .phone-battery-sum
+                    p イヤーピースは一人ひとりの耳の個性を吸収、微調整し、高いフィット感が可能に。強い力も加わらないので長時間装着しても痛くなりにくい設計。
+        include /includes/_battary.pug
+    .heatset-color.scroll
+        .heatset-color-main.main-wrap
+            .color-li
+                p COLOR VARIATION
+                ul.color-list
+                    li
+                    li
+                    li
+
+            .color-prod
+                ul.top
+                    li
+                        img(src="image/product/F1-FRONT-Lblack.png" alt="FUNOHM")
+                    li
+                        img(src="image/product1/F1-FRONT-multi.png" alt="FUNOHM")
+                ul.bottom
+                    li
+                        img(src="image/product1/F1-FRONT-grey02.png" alt="FUNOHM")
+            ul.phone-color-prod.phone
+                    li
+                        img(src="image/product/F1-FRONT-Lblack.png" alt="FUNOHM")
+                    li
+                        img(src="image/product1/F1-FRONT-multi.png" alt="FUNOHM")
+                    li
+                        img(src="image/product1/F1-FRONT-grey02.png" alt="FUNOHM")
+            .clear
+    .use-manual.scroll
+        .main-wrap.use-manual-main
+            .use-manual-img
+                img(src="image/product1/Group@2x.png" alt="FUNOHM")
+            .use-manual-desc
+                .manual-title
+                    .black-title FUNOHM
+                    .white-title USER MANUAL
+                .manual-desc
+                    .left-desc 取扱説明書をダウンロード
+                    a(href="http://www.funohm.com/support/download/F1-manual.pdf").right-desc 取扱説明はこちら
+                //- .manual-desc
+                //-     .left-desc 製品カタログをダウンロード
+                //-     a.right-desc カタログはこちら
+            .clear
+    .include-wrap.scroll
+        .main-wrap.include-wrap-main
+            .include-wrap-desc
+                p INCLUDE ITEMS
+                p 付属品
+            .include-img
+                img.pc(src="image/product1/include.png" alt="FUNOHM")
+                img.phone(src="image/product/include-items.svg" alt="FUNOHM")
+            .clear
+    include /includes/_productLink.pug
+
+
+
+
+
+
+
+
+
+
+
+
+

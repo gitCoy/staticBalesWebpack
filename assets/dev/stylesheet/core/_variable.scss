@@ -1,0 +1,72 @@
+$calc-base-num: 530;
+$calc-sp: 85;
+$global-font-unit: 1rem;
+
+$global-color: (
+        a: #111,
+        b: #E50113,
+        c: #D8D8D8,
+        d: #979797,
+        e: #4183C4,
+        f: #555,
+        g: #EFE9DD,
+        h: #006965,
+        k: #fff,
+);
+
+$global-zIndex: (
+        header: 9999,
+        a: 999,
+        b: 90
+);
+
+$global-default-family: 'Rubik300';
+
+$global-font-size: (
+        a: (28/$calc-base-num)*$global-font-unit, //28px
+        b: (22/$calc-base-num)*$global-font-unit, //22px
+        c: (16/$calc-base-num)*$global-font-unit, //16px
+        d: (36/$calc-base-num)*$global-font-unit, //36px
+        e: (18/$calc-base-num)*$global-font-unit, //12px
+        f: (20/$calc-base-num)*$global-font-unit, //20px
+        g: (40/$calc-base-num)*$global-font-unit, //40px
+        h: (64/$calc-base-num)*$global-font-unit, //64px
+        i: (30/$calc-base-num)*$global-font-unit, //30px
+        j: (35/$calc-base-num)*$global-font-unit, //35px
+        k: (17/$calc-base-num)*$global-font-unit, //17px
+        l: (72/$calc-base-num)*$global-font-unit, //72px
+        m: (48/$calc-base-num)*$global-font-unit, //48px
+);
+
+$global-spacing: (
+        container:20px,
+        a: (70/$calc-base-num)*$global-font-unit,  // 70px
+        b: (42/$calc-base-num)*$global-font-unit,  // 42px
+        c: (60/$calc-base-num)*$global-font-unit,  // 60px
+        d: (15/$calc-base-num)*$global-font-unit,  // 15px
+        e: (30/$calc-base-num)*$global-font-unit,  // 30px
+        f: (65/$calc-base-num)*$global-font-unit,  // 65px
+        g: (100/$calc-base-num)*$global-font-unit,  // 100px
+        h: (35/$calc-base-num)*$global-font-unit,  // 35px
+        i: (20/$calc-base-num)*$global-font-unit,  // 20px
+        j: (120/$calc-base-num)*$global-font-unit, // 120px
+        k: (50/$calc-base-num)*$global-font-unit,  // 50px
+        l: (80/$calc-base-num)*$global-font-unit,  // 80px
+        m: (25/$calc-base-num)*$global-font-unit,  // 25px
+);
+
+$global-width: (
+        max-width: 1020px,
+        pc: 1200px,
+        pad: 768px,
+        mediaW: 813px,
+        phone: 320px,
+        content: 843px,
+        bannerHeight: 100.5vw,
+);
+
+$global-time: (
+        transition: .4s,
+        scroll: .5s,
+        a: .1s,
+);

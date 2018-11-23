@@ -1,0 +1,33 @@
+.page-commercial {
+  .commercial-content {
+    max-width: map_get($global-width, content);
+  }
+  .commercial-content {
+    font-size: map_get($global-font-size, c);
+    line-height: 1.5;
+    padding-bottom: map_get($global-spacing, g);
+
+    h2 {
+      font-size: map_get($global-font-size, a);
+      line-height: 1;
+      padding: map_get($global-spacing, f) 0 (45/$calc-base-num)*$global-font-unit;
+      text-align: center;
+    }
+
+    .cont-row {
+      display: flex;
+
+      &+.cont-row {
+        margin-top: map_get($global-spacing, h);
+      }
+      span {
+        display: block;
+        width: 254px;
+      }
+
+      .text-cont-wrap {
+        flex: 1;
+      }
+    }
+  }
+}

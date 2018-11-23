@@ -1,0 +1,202 @@
+footer {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  padding: map_get($global-spacing, c) 0 map_get($global-spacing, c);
+  z-index: map_get($global-zIndex, b);
+
+  a {
+    color: #fff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+}
+
+.footer-main, .nav-slider-wrap {
+  .media-link {
+    margin-top: map_get($global-spacing, j);
+
+    a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &+a {
+        margin-left: map_get($global-spacing, i);
+      }
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+
+    .t-icon {
+      background-image: url("../image/SNS-icons-01.svg");
+    }
+
+    .f-icon {
+      background-image: url("../image/SNS-icons-02.svg");
+    }
+
+    .b-icon {
+      background-image: url("../image/SNS-icons-03.svg");
+    }
+  }
+}
+.nav-slider-wrap {
+  .media-link {
+    margin-top: (60/$calc-sp)*$global-font-unit;
+
+    a {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.footer-main {
+  height: auto;
+
+  .contact-wrap {
+    display: flex;
+
+    .logo-link {
+      display: block;
+    }
+
+    .logo-link:hover {
+      opacity: .7;
+    }
+  }
+
+  .footer-link-wrap {
+    font-size: map_get($global-font-size, e);
+    line-height: 1.5;
+
+    dt {
+      color: map_get($global-color, f);
+    }
+
+    dd {
+      margin-top: map_get($global-spacing, i);
+    }
+  }
+
+  .footer-product-col {
+    margin-left: 10vw;
+  }
+
+  .footer-company-col {
+    margin-left: (66/$calc-base-num)*$global-font-unit;
+  }
+
+  .footer-tel-location {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: map_get($global-spacing, i);
+    font-size: map_get($global-font-size, c);
+    line-height: 1.5;
+    font-family: NotoSansCJKjp-Regular ,$global-default-family;
+  }
+
+  .bottom-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: map_get($global-spacing, a);
+
+    .http-wrap {
+      font-size: map_get($global-font-size, e);
+      line-height: 1.5;
+      font-family: NotoSansCJKjp-Light ,$global-default-family;
+
+      a + a {
+        margin-left: map_get($global-spacing, h);
+      }
+    }
+
+    .company-tag {
+      font-size: map_get($global-font-size, c);
+      line-height: 1.2;
+      letter-spacing: 5px;
+    }
+  }
+}
+
+
+/* media start*/
+@media screen and (max-width: map_get($global-width, mediaW)) {
+  .nav-slider-wrap {
+    .media-link {
+      a {
+        width: (50/$calc-sp)*$global-font-unit;
+        height: (50/$calc-sp)*$global-font-unit;
+        background-size: 60% 60%;
+
+        &:last-child {
+          background-size: 80%;
+        }
+      }
+    }
+  }
+  .footer-main {
+    .contact-wrap {
+      justify-content: center;
+      padding-top: (50/$calc-sp)*$global-font-unit;
+      width: 100%;
+
+      .footer-link-wrap, .footer-tel-location {
+        display: none;
+      }
+
+      .logo-link {
+        width: (111/$calc-sp)*$global-font-unit;
+        margin: 0 auto (30/$calc-sp)*$global-font-unit;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .media-link {
+        a {
+          width: (36/$calc-sp)*$global-font-unit;
+          height: (36/$calc-sp)*$global-font-unit;
+          background-size: 80% 80%;
+
+          &+a {
+            margin-left: (20/$calc-sp)*$global-font-unit;
+          }
+
+          &:last-child {
+            background-size: 100%;
+          }
+        }
+      }
+    }
+
+    .bottom-wrap {
+      justify-content: center;
+      margin: (30/$calc-sp)*$global-font-unit auto (12/$calc-sp)*$global-font-unit;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      text-align: center;
+      width: 100%;
+
+      .http-wrap {
+        padding: (20/$calc-sp)*$global-font-unit 0 (40/$calc-sp)*$global-font-unit;
+        font-size: (12/$calc-sp)*$global-font-unit;
+      }
+
+      .company-tag {
+        font-size: (12/$calc-sp)*$global-font-unit;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+header.x-header
+  -
+    var menuObj = [
+      {href: './philosophy.html', name: 'PHILOSOPHY'},
+      {href: 'javascript: void();', name: 'PRODUCT', links: [
+        {href: './product2.html', name: 'F2'},
+        {href: './product1.html', name: 'F1'}
+      ]},
+      {href: './company.html', name: 'COMPANY'},
+      {href: './shopList.html', name: 'SHOPLIST'}
+    ]
+  -
+  .main-wrap.header-wrap
+    .memu-wrap.x-menu
+      .item
+      .item
+      .item
+    a.logo(href="./index.html")
+      h1 FUNOHM
+    nav.nav
+      ul
+        -for(var i=0;i<menuObj.length;i++) {
+        li
+          a(href=menuObj[i].href)= menuObj[i].name
+          -if(menuObj[i].links) {
+          ul.nav-submenu-wrap
+            -for(var j=0;j<menuObj[i].links.length;j++) {
+            li
+              a(href=menuObj[i].links[j].href)= menuObj[i].links[j].name
+            -}
+          -}
+        -}
+  include /includes/_headerSidebar.pug

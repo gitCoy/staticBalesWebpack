@@ -1,0 +1,85 @@
+.hide {
+  display: none;
+}
+
+.main-wrap {
+  max-width: map_get($global-width, max-width);
+  margin: 0 auto;
+  padding: 0 map_get($global-spacing, container);
+  height: 100%;
+}
+
+.x-home-height {
+  height: 100vh;
+}
+
+.scroll {
+  transition: all ease-in-out map_get($global-time, scroll);
+  transform: translate(0,20px);
+  opacity: 0;
+}
+
+.scroll-left {
+  transition: all ease-in-out map_get($global-time, scroll);
+  transform: translate(-200px,0);
+  opacity: 0;
+}
+
+.scroll-right {
+  transition: all ease-in-out map_get($global-time, scroll);
+  transform: translate(200px,0);
+  opacity: 0;
+}
+
+.scroll-delay {
+  transition: all ease-in-out map_get($global-time, scroll);
+ // transition-delay: 300ms;
+  transform: translate(0,20px);
+  opacity: 0;
+}
+
+.is_scoped, .page-product2 .heatset-banner-list >li.is_scoped {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.page-padding-top {
+  padding-top: (142/$calc-base-num)*$global-font-unit; //减小header的padding
+}
+
+.no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+//header nav hover style
+.page-company, .page-shop, .page-policy, .page-commercial {
+  .nav>ul>li {
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    &:hover a {
+      color: #fff;
+    }
+  }
+  .nav-submenu-wrap {
+    background-color: #000;
+    li:hover {
+      background-color: lighten(#000, 20%);
+    }
+  }
+}
+
+/* media start*/
+@media screen and (max-width: map_get($global-width, mediaW)) {
+  .page-padding-top {
+    padding-top: (70/$calc-sp)*$global-font-unit; //减小header的padding
+  }
+
+  .x-home-height {
+    min-height: map_get($global-width, bannerHeight);
+  }
+}

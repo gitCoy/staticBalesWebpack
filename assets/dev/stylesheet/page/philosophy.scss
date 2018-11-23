@@ -1,0 +1,161 @@
+.page-philosophy {
+  .philosophy-home-wrap {
+    display: flex;
+  }
+
+  .home-content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+
+    h2, h3 {
+      font-weight: bold;
+      line-height: 1.48;
+      font-family: NotoSansCJKjp-Bold ,$global-default-family;
+    }
+
+    h2 {
+      font-size: map_get($global-font-size, m);
+    }
+
+    h3 {
+      font-size: map_get($global-font-size, d);
+    }
+  }
+
+  .home-cont-img {
+    position: relative;
+    flex-grow: 1;
+    background: url("../image/philosophy/philosophy-hero.png") bottom no-repeat;
+    background-size: cover;
+  }
+
+  .side-icon-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: map_get($global-spacing, i);
+    background: map_get($global-color, b);
+    background-size: contain;
+    height: 65%;
+
+    &:after {
+      position: absolute;
+      bottom: map_get($global-spacing, c)*-1;
+      left: 0;
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: map_get($global-spacing, c);
+      background: url("../image/philosophy/phy-icon.png") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .philosophy-hear-wrap {
+    display: flex;
+
+    .cont-img-wrap {
+      position: relative;
+      width: 40%;
+      background: url("../image/philosophy/philosophy-word.jpg") center no-repeat;
+      background-size: cover;
+      height: 58vh;
+
+      .side-icon-img {
+        left: auto;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        transform: rotate(180deg);
+      }
+    }
+
+    .heart-content-wrap {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+
+      .heart-content {
+        width: 70%;
+
+        h2 {
+          font-size: (56/$calc-base-num)*$global-font-unit;
+          line-height: 1.15;
+          font-family: DIN-BoldAlternate ,$global-default-family;
+          letter-spacing:6px;
+        }
+
+        p {
+          font-size: map_get($global-font-size, i);
+          line-height: 1.6;
+          letter-spacing:5px;
+          font-family: NotoSansCJKjp-Medium,$global-default-family;
+          margin-top: (12/$calc-base-num)*$global-font-unit;
+        }
+      }
+    }
+  }
+}
+
+/* media start*/
+@media screen and (max-width: map_get($global-width, mediaW)) {
+  .page-philosophy {
+    .philosophy-home-wrap, .philosophy-hear-wrap {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+
+      .home-content-wrap {
+        width: 100%;
+        font-weight: bold;
+        justify-content: center;
+        padding: (30/$calc-sp)*$global-font-unit 0;
+
+        h2 {
+          font-size: (16/$calc-sp)*$global-font-unit;
+        }
+
+        h3 {
+          font-size: (14/$calc-sp)*$global-font-unit;
+        }
+      }
+
+      .side-icon-img {
+        width: (10/$calc-sp)*$global-font-unit;
+
+        &:after {
+          bottom: -(40/$calc-sp)*$global-font-unit;
+          height: (40/$calc-sp)*$global-font-unit;
+        }
+      }
+    }
+
+    .philosophy-hear-wrap {
+      .cont-img-wrap {
+        width: 100%;
+      }
+
+      .heart-content-wrap {
+        background-color: map_get($global-color, k);
+        padding: (26/$calc-sp)*$global-font-unit 0;
+
+        .heart-content {
+          width: 100%;
+          padding: 0 20px;
+
+          h2 {
+            margin-bottom: (25/$calc-sp)*$global-font-unit;
+            font-size: (24/$calc-sp)*$global-font-unit;
+            letter-spacing: 3px;
+          }
+
+          p {
+            font-size: (12/$calc-sp)*$global-font-unit;
+          }
+        }
+      }
+    }
+  }
+}

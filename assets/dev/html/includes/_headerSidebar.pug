@@ -1,0 +1,17 @@
+nav.nav-slider-wrap
+  ul
+    -for(var i=0;i<menuObj.length;i++) {
+    -if(!menuObj[i].links) {
+    li
+      a(href=menuObj[i].href)= menuObj[i].name
+    -} else {
+    -for(var j=0;j<menuObj[i].links.length;j++) {
+    li
+      a(href=menuObj[i].links[j].href)= menuObj[i].links[j].name
+    -}
+    -}
+    -}
+    li.media-link
+      a.t-icon(href="https://www.instagram.com/funohm/" target="_blank")
+      a.f-icon(href="https://www.facebook.com/funohm/" target="_blank")
+      a.b-icon(href="https://twitter.com/funohm1" target="_blank")
