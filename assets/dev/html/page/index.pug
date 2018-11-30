@@ -1,51 +1,17 @@
-extends ../layouts/_default.pug
-block meta
-  title FUNOHM-完全ワイヤレスイヤホン「ファノーム」公式サイト
-block page_option
-  - page_class.push('page-index')
-block content
-  include ../mixin/indexTitle.pug
-  -
-    var indexTitleObj = [{
-      title: 'PRODUCT',
-      liList: [{
-        contList: ['製品一覧']
-      }]
-    }, {
-      title: 'SHOPLIST&COMPANY',
-      liList: [{
-        contList: ['店舗一覧', 'お買い求めできる店舗一覧です。']
-      }, {
-        contList: ['会社概要']
-      }]
-    }]
-  -
-  .index-home-wrap.x-home-height
-    .index-home-slick.x-banner-slick
-      .slick-item
-      .slick-item
-      .slick-item
-      .slick-item
-    .main-wrap
-      .home-content-wrap
-        h2 耳に 心に 届く
-        h3 FLY on your HEARt
-        p
-          | 完全ワイヤレスイヤホン：ファノーム
-          br
-          | F2 2018 11月下旬発売予定
-        a.home-more-btn(href="./philosophy.html") READ MORE
-  +indexTitle(indexTitleObj[0])
-  a.index-earphone-wrap(href="./product2.html")
-    .mask-wrap
-    .earphone-cont
-      h2
-        | WIRELESS
-        br
-        | EARPHONE F2
-  +indexTitle(indexTitleObj[1])
-  .index-other-wrap
-    a.index-other-shop.index-other-item(href="./shopList.html")
-      h4 SHOP LIST
-    a.index-other-company.index-other-item(href="./company.html")
-      h4 COMPANY
+doctype html
+html(lang="en")
+  head
+    title ds
+    script(type='text/javascript').
+      if (foo) bar(1 + 5)
+  body
+    h1 Pug - node template engine
+    #root
+    #container.col
+      if true
+        p You are amazing
+      else
+        p Get on it!
+      p.
+        Pug is a terse and simple templating language with a
+        strong focus on performance and powerful features.
