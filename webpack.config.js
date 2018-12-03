@@ -17,6 +17,18 @@ module.exports = {
     path: __dirname + '/public',
     filename: '[name].min.js?[hash]'
   },
+  module: {
+    rules: [
+      {
+        test: /\.pug$/,
+        exclude: /node_modules/,
+        use: [
+          'html-loader',
+          'pug-html-loader'
+        ]
+      }
+    ]
+  },
 
   plugins: [
     new CleanWebpackPlugin('public'),
@@ -54,23 +66,10 @@ module.exports = {
       template: './' + pathCom + '/html/page/shopList.pug'
     })
   ],
-  module: {
-    rules: [
-      {
-        test: '/\.pug$/',
-        use: [
-          'raw-loader',
-          'pug-html-loader'
-        ]
-      }
-    ]
-  },
-  devtool: 'eval-source-map',
   devServer: {
     prot: 3000,
     contentBase: './public',
     historyApiFallback: true,
     inline: true
-  },
-  mode: 'production'
+  }
 }
